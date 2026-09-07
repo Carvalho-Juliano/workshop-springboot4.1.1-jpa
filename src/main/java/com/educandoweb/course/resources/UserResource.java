@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResources {
+public class UserResource {
   
   private UserService service;
 
-  public UserResources(UserService service) {
+  public UserResource(UserService service) {
     this.service = service;
   }
 
