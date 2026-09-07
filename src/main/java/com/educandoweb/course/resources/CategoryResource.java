@@ -13,11 +13,11 @@ import com.educandoweb.course.services.CategoryService;
 
 @RestController
 @RequestMapping(value = "/categories")
-public class CategoryResources {
+public class CategoryResource {
 
   private CategoryService service;
 
-  public CategoryResources(CategoryService service) {
+  public CategoryResource(CategoryService service) {
     this.service = service;
   }
 
