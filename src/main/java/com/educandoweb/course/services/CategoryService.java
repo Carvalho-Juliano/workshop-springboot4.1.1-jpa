@@ -12,7 +12,7 @@ import com.educandoweb.course.repositories.CategoryRepository;
 @Service
 public class CategoryService {
   
-  private CategoryRepository repository;
+  private final CategoryRepository repository;
   
   public CategoryService(CategoryRepository repository) {
     this.repository = repository;

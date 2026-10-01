@@ -1,5 +1,6 @@
 package com.educandoweb.course.config;
 
+import com.educandoweb.course.resources.UserResource;
 import java.time.Instant;
 import java.util.Arrays;
 
@@ -25,24 +26,25 @@ import com.educandoweb.course.repositories.UserRepository;
 @Profile("test")
 public class TestConfig implements CommandLineRunner {
     
-  @Autowired
   private UserRepository userRepository;
-
-  @Autowired
   private OrderRepository orderRepository;
-
-  @Autowired
   private CategoryRepository categoryRepository;
-
-  @Autowired
   private ProductRepository productRepository;
-
-  @Autowired 
   private  OrderItemRepository orderItemRepository;
 
-  // @Autowired
-  // private 
-
+  public TestConfig(
+      UserRepository userRepository, 
+      OrderRepository orderRepository,
+      CategoryRepository categoryRepository,
+      ProductRepository productRepository,
+      OrderItemRepository orderItemRepository
+    ) {
+      this.userRepository = userRepository;
+      this.orderRepository = orderRepository;
+      this.categoryRepository = categoryRepository;
+      this.productRepository = productRepository;
+      this.orderItemRepository = orderItemRepository;
+  }
 
   @Override
   public void run(String... args) throws Exception {

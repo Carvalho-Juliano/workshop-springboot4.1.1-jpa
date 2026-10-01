@@ -15,7 +15,7 @@ import com.educandoweb.course.services.CategoryService;
 @RequestMapping(value = "/categories")
 public class CategoryResource {
 
-  private CategoryService service;
+  private final CategoryService service;
 
   public CategoryResource(CategoryService service) {
     this.service = service;
